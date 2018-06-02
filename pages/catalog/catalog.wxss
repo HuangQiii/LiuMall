@@ -1,0 +1,108 @@
+page {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  width: 100%; 
+}
+
+.catalog {
+  flex: 1;
+  width: 100%;
+  background: #fff;
+  display: flex;
+}
+
+.nav {
+  width: 162rpx;
+  height: 100%;
+}
+
+.nav-block {
+  display: flex;
+  height: 90rpx;
+  align-items: center;
+}
+
+.nav-item {
+  flex: 1;
+  text-align: center;
+  color: #666;
+  font-size: 28rpx;
+  border-left: 6rpx solid transparent;
+}
+
+.nav-item-active {
+  border-left-color: #fab614;
+  color: #fab614;
+}
+
+.content {
+  border-left: 0.8px solid #ebebeb;
+  flex: 1;
+  height: 100%;
+  padding: 0 30rpx;
+}
+
+.content-banner {
+  display: block;
+  height: 222rpx;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-top: 30rpx;
+}
+
+.content-banner-image {
+   width: 100%; 
+}
+
+.content-title-block {
+  height: 108rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-title {
+  font-size: 24rpx;
+  color: #666;
+  padding: 0 20rpx;
+}
+
+.content-title-line {
+  width: 100rpx;
+  height: 1px;
+  background: #d9d9d9;
+}
+
+.content-wrap {
+  width: 100%;
+}
+
+.content-block {
+  display: inline-block;
+  height: 216rpx; 
+  width: 33%; 
+  text-align: center;
+}
+
+.content-block-img {
+  height: 144rpx;
+  width: 144rpx;
+  text-align: center;
+}
+
+.content-block-title {
+  display: block;
+  text-align: center;
+  font-size: 24rpx;
+  color: #666;
+  height: 72rpx;
+  width: 100%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}

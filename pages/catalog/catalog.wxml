@@ -1,0 +1,60 @@
+<view class="container">
+  <view class="catalog">
+    <scroll-view
+      class="nav"
+      scroll-y="true"
+    >
+      <view
+        class="nav-block"
+        wx:for="{{navList}}"
+        wx:key="{{item.id}}"
+        data-id="{{item.id}}"
+        data-index="{{index}}"
+        bindtap="switchCate"
+      >
+        <view class="nav-item {{ currentCategory.id == item.id ? 'nav-item-active' : ''}}">
+          {{item.name}}
+        </view>
+      </view>
+    </scroll-view>
+
+    <scroll-view
+      class="content"
+      scroll-y="true"
+    >
+      <view
+        class="content-banner"
+        url="someUrl"
+      >
+        <image
+          class="content-banner-image"
+          src="{{currentCategory.bannerUrl}}"
+          bindtap="toPromotion"
+        />
+      </view>
+      <view class="content-title-block">
+        <view class="content-title-line" />
+        <view class="content-title">
+          {{currentCategory.name}}分类
+        </view>
+        <view class="content-title-line" />
+      </view>
+      <view class="content-wrap">
+        <navigator
+          url="/pages/goods/goods?id={{item.id}}"
+          class="content-block"
+          wx:for="{{currentCategory.subCategoryList}}"
+          wx:key="{{item.id}}"
+        >
+          <image
+            class="content-block-img"
+            src="{{item.bannerUrl}}"
+          />
+          <view class="content-block-title">
+            {{item.name}}
+          </view>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+</view>
