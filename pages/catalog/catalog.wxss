@@ -7,7 +7,7 @@ page {
   width: 100%; 
 }
 
-.catalog {
+.category {
   flex: 1;
   width: 100%;
   background: #fff;

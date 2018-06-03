@@ -1,18 +1,18 @@
 <view class="container">
-  <view class="catalog">
+  <view class="category">
     <scroll-view
       class="nav"
       scroll-y="true"
     >
       <view
         class="nav-block"
-        wx:for="{{navList}}"
+        wx:for="{{allData}}"
         wx:key="{{item.id}}"
         data-id="{{item.id}}"
         data-index="{{index}}"
         bindtap="switchCate"
       >
-        <view class="nav-item {{ currentCategory.id == item.id ? 'nav-item-active' : ''}}">
+        <view class="nav-item {{ currentId == item.id ? 'nav-item-active' : ''}}">
           {{item.name}}
         </view>
       </view>
@@ -22,16 +22,15 @@
       class="content"
       scroll-y="true"
     >
-      <view
+      <navigator
         class="content-banner"
-        url="someUrl"
+        url="/pages/goods/goods?id={{currentCategory.bannerId}}"
       >
         <image
           class="content-banner-image"
           src="{{currentCategory.bannerUrl}}"
-          bindtap="toPromotion"
         />
-      </view>
+      </navigator>
       <view class="content-title-block">
         <view class="content-title-line" />
         <view class="content-title">

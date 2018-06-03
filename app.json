@@ -1,7 +1,8 @@
 {
   "pages":[
     "pages/catalog/catalog",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/goods/goods"
   ],
   "window":{
     "backgroundTextStyle": "dark",
