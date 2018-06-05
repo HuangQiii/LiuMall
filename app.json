@@ -1,8 +1,9 @@
 {
   "pages":[
-    "pages/catalog/catalog",
+    "pages/classify/classify",
     "pages/index/index",
-    "pages/goods/goods"
+    "pages/goods/goods",
+    "pages/category/category"
   ],
   "window":{
     "backgroundTextStyle": "dark",
@@ -25,7 +26,7 @@
         "selectedIconPath": "images/indexSelected.png"
       },
       {
-        "pagePath": "pages/catalog/catalog",
+        "pagePath": "pages/classify/classify",
         "text": "分类",
         "iconPath": "images/all.png",
         "selectedIconPath": "images/allSelected.png"

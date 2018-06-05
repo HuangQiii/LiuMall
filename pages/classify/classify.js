@@ -2,7 +2,7 @@ Page({
   data: {
     currentId: 0,
     allData: [],
-    currentCategory: {},
+    currentClassify: {},
   },
 
   onLoad: function (options) {
@@ -57,7 +57,7 @@ Page({
     this.setData({
       allData: mockData,
       currentId: mockData.length ? mockData[0].id : 0,
-      currentCategory: mockData.length ? mockData[0] : {},
+      currentClassify: mockData.length ? mockData[0] : {},
     });
   },
 
@@ -66,14 +66,14 @@ Page({
     if (clickedId !== this.data.currentId) {
       this.setData({
         currentId: clickedId,
-        currentCategory: this.data.allData.find(v => v.id === clickedId) || {},
+        currentClassify: this.data.allData.find(v => v.id === clickedId) || {},
       });
     }
   },
 
   toPromotion:function(){
     wx.navigateTo({
-      url: '/pages/goods/goods?id=' + this.data.currentCategory.bannerId,
+      url: '/pages/goods/goods?id=' + this.data.currentClassify.bannerId,
     })
   }
 })

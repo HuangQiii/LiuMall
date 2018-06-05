@@ -1,5 +1,5 @@
 <view class="container">
-  <view class="category">
+  <view class="classify">
     <scroll-view
       class="nav"
       scroll-y="true"
@@ -24,25 +24,25 @@
     >
       <navigator
         class="content-banner"
-        url="/pages/goods/goods?id={{currentCategory.bannerId}}"
+        url="/pages/goods/goods?id={{currentClassify.bannerId}}"
       >
         <image
           class="content-banner-image"
-          src="{{currentCategory.bannerUrl}}"
+          src="{{currentClassify.bannerUrl}}"
         />
       </navigator>
       <view class="content-title-block">
         <view class="content-title-line" />
         <view class="content-title">
-          {{currentCategory.name}}分类
+          {{currentClassify.name}}分类
         </view>
         <view class="content-title-line" />
       </view>
       <view class="content-wrap">
         <navigator
-          url="/pages/goods/goods?id={{item.id}}"
+          url="/pages/category/category?id={{item.id}}"
           class="content-block"
-          wx:for="{{currentCategory.subCategoryList}}"
+          wx:for="{{currentClassify.subCategoryList}}"
           wx:key="{{item.id}}"
         >
           <image
