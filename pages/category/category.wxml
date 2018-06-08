@@ -13,7 +13,7 @@
     scroll-top="{{scrollTop}}"
     style="height:{{scrollHeight}};"
   >
-    <view class="content">
+    <!-- <view class="content">
       <view
         class="good"
         wx:for="{{currentGoods}}"
@@ -32,6 +32,30 @@
           <text class="message name">{{item.name}}</text>
           <text class="message description">{{item.description}}</text>
           <text class="message price">￥{{item.price}}</text>
+        </navigator>
+      </view>
+    </view> -->
+    <view class="content-line">
+      <view
+        class="good-line"
+        wx:for="{{currentGoods}}"
+        wx:key="{{item.id}}"
+        wx:for-index="index"
+        wx:for-item="item"
+      >
+        <navigator class="wrap-line" url="../goods/goods?id={{item.id}}">
+          <image
+            class="img-line"
+            src="{{item.list_pic_url}}"
+            background-size="cover"
+            mode="aspectFit"
+            lazy-load="true"
+          />
+          <view class="text-wrap-line">
+            <text class="message-line name-line">{{item.name}}</text>
+            <text class="message-line description-line">{{item.description}}</text>
+            <text class="message-line price-line">￥{{item.price}}</text>
+          </view>
         </navigator>
       </view>
     </view>

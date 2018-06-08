@@ -16,6 +16,73 @@
     background: #fff;
 }
 
+.good-line {
+  /* float: left; */
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 25rpx;
+  padding-left: 33rpx;
+  padding-right: 33rpx;
+}
+
+.wrap-line {
+  width: 100%;
+  display: flex;
+}
+
+.img-line {
+  width: 160rpx;
+  height: 160rpx;
+  border: 1px solid #f0f0f0;
+  flex-shrink: 0;
+}
+
+.text-wrap-line {
+  padding: 0 33rpx;
+  box-sizing: border-box;
+  height: 160rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.message-line {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.name-line {
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 10rpx;
+}
+
+.description-line {
+  font-size: 20rpx;
+  color: #7f7f7f;
+  margin-bottom: 10rpx;
+}
+
+.price-line {
+  font-size: 22rpx;
+  font-weight: bold;
+  color: #fab614;
+} 
+
+.content-line{
+    margin-top: 120rpx;
+    height: auto;
+    overflow: hidden;
+    background: #fff;
+}
+
 .good {
   float: left;
   width: 320rpx;

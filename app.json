@@ -1,9 +1,9 @@
 {
   "pages":[
+    "pages/category/category",
     "pages/classify/classify",
     "pages/index/index",
-    "pages/goods/goods",
-    "pages/category/category"
+    "pages/goods/goods"
   ],
   "window":{
     "backgroundTextStyle": "dark",
