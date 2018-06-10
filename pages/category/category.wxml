@@ -8,12 +8,19 @@
     />
   </view>
 
+  <view class="bar">
+    <zan-icon
+      type="{{ displayType === 'line' ? 'description' : 'wap-nav' }}"
+      bindtap="changeDisplayType"
+    />
+  </view>
+
   <scroll-view
     scroll-y="true"
     scroll-top="{{scrollTop}}"
     style="height:{{scrollHeight}};"
   >
-    <!-- <view class="content">
+     <view class="content" wx:if="{{displayType === 'block'}}">
       <view
         class="good"
         wx:for="{{currentGoods}}"
@@ -34,8 +41,8 @@
           <text class="message price">￥{{item.price}}</text>
         </navigator>
       </view>
-    </view> -->
-    <view class="content-line">
+    </view> 
+    <view class="content-line" wx:else>
       <view
         class="good-line"
         wx:for="{{currentGoods}}"

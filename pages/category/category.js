@@ -15,6 +15,7 @@ Page(extend({}, Tab,
       },
       allData: {},
       currentGoods: [],
+      displayType: 'block',
     },
     onLoad: function (options) {
       const tabs = [
@@ -53,6 +54,30 @@ Page(extend({}, Tab,
       ];
       const allData = {
         1: [
+          {
+            list_pic_url: '/images/wudong.jpg',
+            name: '污妖王污妖王污妖王污妖王污妖王污妖王污妖王污妖王',
+            description: '超级污超级污超级污超级污超级污超级污超级污超级污超级污超级污',
+            price: '6666666666666666666666666666666666666666666666'
+          },
+          {
+            list_pic_url: '/images/wudong.jpg',
+            name: '污妖王',
+            description: '超级污',
+            price: '6'
+          },
+          {
+            list_pic_url: '/images/wudong.jpg',
+            name: '污妖王',
+            description: '超级污',
+            price: '66'
+          },
+          {
+            list_pic_url: '/images/wudong.jpg',
+            name: '污妖王',
+            description: '超级污',
+            price: '666'
+          },
           {
             list_pic_url: '/images/wudong.jpg',
             name: '污妖王污妖王污妖王污妖王污妖王污妖王污妖王污妖王',
@@ -125,5 +150,17 @@ Page(extend({}, Tab,
         currentGoods: this.data.allData[selectedId] || [],
       });
     },
+    changeDisplayType: function () {
+      var currentDisplayType = this.data.displayType;
+      if (currentDisplayType === 'line') {
+        this.setData({
+          displayType: 'block',
+        });
+      } else {
+        this.setData({
+          displayType: 'line',
+        });
+      }
+    }
   })
 )
