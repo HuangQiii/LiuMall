@@ -1,1 +1,6 @@
-{}
+{
+  "navigationBarTitleText": "商品详情",
+  "usingComponents": {
+    "zan-icon": "../../zanui/dist/icon/index"
+  }
+}

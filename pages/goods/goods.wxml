@@ -1,2 +1,91 @@
-<!--pages/goods/goods.wxml-->
-<text>pages/goods/goods.wxml</text>
+<scroll-view class="contain" scroll-y="true">
+  <view>
+    <swiper
+      class="goodsimgs"
+      indicator-dots="true"
+      indicator-color="#e0e0e0"
+      indicator-active-color="#fff"
+      autoplay="true"
+      interval="3000"
+      duration="1000"
+    >
+      <swiper-item
+        wx:for="{{gallery}}"
+        wx:key="{{item.id}}"
+      >
+        <image
+          src="{{item.imgUrl}}"
+          background-size="cover"
+        />
+      </swiper-item>
+    </swiper>
+
+    <view class='good-information'>
+      <view class='left-info'>
+        <view class='good-title'>
+          {{goods.name}}
+        </view>
+        <view class='good-price'>
+          ￥{{goods.price}}
+        </view>
+        <view
+          class="brand"
+          wx:if="{{brands.length > 0}}"
+        >
+          <view
+            wx:for="{{brands}}"
+            wx:key="{{item.id}}"
+            data-value="{{item.name}}"
+            class="tag"
+            hover-class="active"
+            bindtap="openBrand"
+          >
+            {{item.name}} > 
+          </view>
+        </view>
+         <view class='good-desc'>
+          {{goods.description}}
+        </view> 
+      </view>
+      <view class='right-info'>
+        <zan-icon
+          type="{{'like'}}"
+          bindtap="changeDisplayType"
+        />
+      </view>
+    </view>
+
+    <view class="goods-attr">
+      <view class="l">
+        <view
+          class="item"
+          wx:for="{{attribute}}"
+          wx:key="{{item.name}}"
+        >
+          <text class="left">{{item.name}}</text>
+          <text class="right">{{item.value}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<view class="bottom-btn">
+  <view
+    class="l l-collect"
+    hover-class="active"
+    bindtap="openIndexPage"
+  >
+    <image
+      class="icon-index"
+      src="/images/toIndex.png"
+    />
+  </view>
+  <view
+    class="r"
+    hover-class="active"
+    bindtap="addToCart"
+  >
+    加入购物车
+  </view>
+</view>
