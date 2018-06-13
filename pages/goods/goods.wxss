@@ -162,8 +162,7 @@
 }
 
 .cart {
-  border: 1px solid #b4282d;
-  background: #b4282d;
+  background: #fab614;
   float: left;
   height: 100rpx;
   line-height: 100rpx;
@@ -173,5 +172,5 @@
 }
 
 .cart.active {
-  background: #981d22;
+  background: #daa520;
 } 
