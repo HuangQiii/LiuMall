@@ -26,13 +26,13 @@ Page(extend({},
         }
       ],
       goods: {
-        name: 'IPhone X 全面屏 全面绽放 256G',
+        name: 'Liu Mall平台专属IPhone X 全面屏 全面绽放',
         description: '全面屏，全面绽放。',
         price: '1.00',
       },
       brands: [
         {
-          name: '官方自营品牌',
+          name: '超低价',
           brandId: '1'
         },
         {

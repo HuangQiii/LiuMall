@@ -1,9 +1,10 @@
 {
   "pages":[
+    "pages/index/index",
     "pages/goods/goods",
     "pages/classify/classify",
     "pages/category/category",
-    "pages/index/index"
+    "pages/cart/cart"
   ],
   "window":{
     "backgroundTextStyle": "dark",
@@ -28,6 +29,12 @@
       {
         "pagePath": "pages/classify/classify",
         "text": "分类",
+        "iconPath": "images/all.png",
+        "selectedIconPath": "images/allSelected.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
         "iconPath": "images/all.png",
         "selectedIconPath": "images/allSelected.png"
       }
