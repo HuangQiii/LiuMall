@@ -1,34 +1,68 @@
-<view>
-  <view class="cart-view" wx:if="{{cartGoods.length > 0 && isLogin}}">
-    <view class="list">
-      <view class="group-item">
-        <view class="goods">
-          <view class="item edit" wx:for="{{cartGoods}}" wx:key="{{item.id}}" wx:for-index="index">
-            <view class="checkbox {{item.checked ? 'checked' : ''}}" bindtap="checkedItem" data-index="{{index}}" data-id="{{item.id}}"></view>
-            <view class="cart-goods">
-              <image class="img" src="{{item.picUrl}}"></image>
-              <view class="info">
-                <view class="t">
-                  <text class="name">{{item.name}}</text>
-                </view>
-                <view class="attr">{{item.spec}}</view>
-                <view class="b">
-                  <text class="price">￥{{item.price}}</text>
-                </view>
-              </view>
-            </view>
-          </view>
+<view
+  class="view"
+  wx:if="{{cartGoods.length}}">
+  <view class="lists">
+    <view
+      class="item"
+      wx:for="{{cartGoods}}"
+      wx:key="{{item.id}}"
+      wx:for-index="index"
+    >
+      <view
+        class="checkbox {{item.checked ? 'checked' : ''}}"
+        bindtap="checkedItem"
+        data-index="{{index}}"
+        data-id="{{item.id}}"
+      >
+        {{item.checked? '√': ''}}
+      </view>
+      <view class="item-good">
+        <image
+          class="img"
+          src="{{item.picUrl}}"
+        />
+        <view class="item-msg">
+          <text class="message name">{{item.name}}</text>
+          <text class="message description">{{item.spec}}</text>
+          <text class="message price">￥{{item.price}}</text>
         </view>
       </view>
     </view>
-    <view class="cart-bottom" wx:if="{{isLogin}}">
-      <view class="checkbox {{checkedAllStatus ? 'checked' : ''}}" bindtap="checkedAll">
+  </view>
+  <view class="bottom-bar">
+    <view
+      class="checkbox {{checkedAllStatus ? 'checked' : ''}}"
+      bindtap="checkedAll"
+    >
+      {{checkedAllStatus? '√': ''}}
+    </view>
+    <view class="bar-msg">
       {{checkedAllStatus ? '已选(' : '全选'}}{{checkedGoodsCount}}{{checkedAllStatus ? ')' : ''}}
-      </view>
-      <view class="total">{{!isEditCart ? '￥'+checkedGoodsAmount : ''}}</view>
-      <view class="edit" bindtap="editCart">{{!isEditCart ? '编辑' : '完成'}}</view>
-      <view class="checkout" hover-class="active" bindtap="deleteCart" wx:if="{{isEditCart}}">删除所选</view>
-      <view class="checkout" hover-class="active" bindtap="checkoutOrder" wx:if="{{!isEditCart}}">下单</view>
+    </view>
+    <view class="total">
+      {{!isEdit ? '￥'+checkedGoodsAmount : ''}}
+    </view>
+    <view
+      class="btn-normal"
+      bindtap="edit"
+    >
+      {{!isEdit ? '编辑' : '完成'}}
+    </view>
+    <view
+      class="btn-light"
+      hover-class="active"
+      bindtap="deleteCart"
+      wx:if="{{isEdit}}"
+    >
+      删除所选
+    </view>
+    <view
+      class="btn-light"
+      hover-class="active"
+      bindtap="checkOut"
+      wx:if="{{!isEdit}}"
+    >
+      下单
     </view>
   </view>
 </view>
