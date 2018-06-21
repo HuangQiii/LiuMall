@@ -4,7 +4,8 @@
     "pages/goods/goods",
     "pages/classify/classify",
     "pages/category/category",
-    "pages/cart/cart"
+    "pages/cart/cart",
+    "pages/user/user"
   ],
   "window":{
     "backgroundTextStyle": "dark",
@@ -35,6 +36,12 @@
       {
         "pagePath": "pages/cart/cart",
         "text": "购物车",
+        "iconPath": "images/all.png",
+        "selectedIconPath": "images/allSelected.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户中心",
         "iconPath": "images/all.png",
         "selectedIconPath": "images/allSelected.png"
       }

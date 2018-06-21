@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="profile-info">
+    <image 
+      class="avatar"
+      src="{{userInfo.avatarUrl}}"
+    />
+    <view class="info">
+      <text class="name">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+
+  <zan-panel class="cell-panel-demo">
+    <zan-cell
+      title="购物车"
+      is-link
+      url=""
+      bindtap=""
+    />
+  </zan-panel>
+</view>

@@ -1,0 +1,50 @@
+page {
+  height: 100%;
+  width: 100%;
+  background: #f4f4f4;
+}
+
+.container {
+  background: #f4f4f4;
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+}
+
+.profile-info {
+  width: 695rpx;
+  height: 280rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 30.25rpx;
+  background: #fab614;
+}
+
+.profile-info .avatar {
+  height: 148rpx;
+  width: 148rpx;
+  border-radius: 50%;
+}
+
+.profile-info .info {
+  flex: 1;
+  height: 85rpx;
+  padding-left: 31.25rpx;
+}
+
+.profile-info .name {
+  display: block;
+  height: 45rpx;
+  line-height: 45rpx;
+  color: #fff;
+  font-size: 37.5rpx;
+  margin-bottom: 10rpx;
+}
+
+.cell-panel-demo {
+  display: block;
+  margin-top: 15px;
+  width: 100%;
+}
