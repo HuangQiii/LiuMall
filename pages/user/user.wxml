@@ -1,17 +1,24 @@
 <view class="container">
-  <view class="profile-info">
+  <view class="wrap">
     <image 
       class="avatar"
       src="{{userInfo.avatarUrl}}"
     />
     <view class="info">
       <text class="name">{{userInfo.nickName}}</text>
+      <text class="msg">已绑定学号</text>
     </view>
   </view>
 
-  <zan-panel class="cell-panel-demo">
+  <zan-panel class="cell-panel">
     <zan-cell
       title="购物车"
+      is-link
+      url=""
+      bindtap=""
+    />
+    <zan-cell
+      title="在售商品"
       is-link
       url=""
       bindtap=""
