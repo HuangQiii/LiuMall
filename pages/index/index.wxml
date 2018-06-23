@@ -1,13 +1,122 @@
-<!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  <view class="search-bg">
+    <view class="search">
+      <image class="search-logo" src="/images/search.png" mode="aspectFit"/>
+      输入关键字
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+
+  <view class="banner-bg">
+    <swiper
+      class="banner"
+      indicator-dots="true"
+      indicator-color="#e0e0e0"
+      indicator-active-color="#fff"
+      autoplay="true"
+      interval="3000"
+      duration="1000"
+    >
+      <swiper-item
+        wx:for="{{banner}}"
+        wx:key="{{item.id}}"
+      >
+        <image
+          src="{{item.imageUrl}}"
+          background-size="cover"
+          data-value="{{item}}"
+          bindtap="bannerNav"
+        />
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="menu">
+    <view
+      class="menu-item"
+      wx:for="{{channel}}"
+      wx:key="{{item.id}}"
+      data-value="{{item}}"
+      bindtap="channelNav"
+    >
+      <!-- <image
+        src="{{item.iconUrl}}"
+        background-size="cover"
+        data-value="{{item}}"
+        bindtap="channelNav"
+      /> -->
+      <zan-icon
+        class="publish"
+        type="{{item.iconUrl}}"
+      />
+      <text data-value="{{item}}" bindtap="channelNav">{{item.name}}</text>
+    </view>
+  </view>
+
+  <view class="block">
+    <navigator url="../promotion/promotion?title=热门商品">
+      <view class="block-header">
+        <text>小编推荐</text>
+      </view>
+    </navigator>
+    <scroll-view
+      class="block-content"
+      scroll-x="true"
+    >
+      <view
+        class="block-item"
+        wx:for="{{brand}}"
+        wx:key="item.id"
+      >
+        <navigator url="../goods/goods?id={{item.id}}">
+          <view class="item">
+            <view class="wrap">
+              <image
+                src="{{item.picUrl}}"
+                mode="aspectFit"
+              />
+            </view>
+          </view>
+          <view class="msg">
+            <text class="name">{{item.name}}</text>
+            <text class="des">{{item.description}}</text>
+            <text class="price">￥ {{item.price}}</text>
+          </view>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="block">
+    <navigator url="../promotion/promotion?title=热门商品">
+      <view class="block-header">
+        <text>今日更新</text>
+      </view>
+    </navigator>
+    <scroll-view
+      class="block-content"
+      scroll-x="true"
+    >
+      <view
+        class="block-item"
+        wx:for="{{brand}}"
+        wx:key="item.id"
+      >
+        <navigator url="../goods/goods?id={{item.id}}">
+          <view class="item">
+            <view class="wrap">
+              <image
+                src="{{item.picUrl}}"
+                mode="aspectFit"
+              />
+            </view>
+          </view>
+          <view class="msg">
+            <text class="name">{{item.name}}</text>
+            <text class="des">{{item.description}}</text>
+            <text class="price">￥ {{item.price}}</text>
+          </view>
+        </navigator>
+      </view>
+    </scroll-view>
   </view>
 </view>

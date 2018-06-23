@@ -8,6 +8,10 @@
       <text class="name">{{userInfo.nickName}}</text>
       <text class="msg">已绑定学号</text>
     </view>
+    <zan-icon
+      class="publish"
+      type="{{'add'}}"
+    />
   </view>
 
   <zan-panel class="cell-panel">

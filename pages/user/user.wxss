@@ -53,6 +53,11 @@ page {
   margin-bottom: 10rpx;
 }
 
+.publish {
+  font-size: 42rpx;
+  color: #fff;
+}
+
 .cell-panel {
   display: block;
   margin-top: 15px;

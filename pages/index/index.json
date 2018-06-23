@@ -1,2 +1,8 @@
 {
+  "navigationBarTitleText": "Liu Mall",
+  "usingComponents": {
+    "zan-panel": "../../zanui/dist/panel/index",
+    "zan-cell": "../../zanui/dist/cell/index",
+    "zan-icon": "../../zanui/dist/icon/index"
+  }
 }

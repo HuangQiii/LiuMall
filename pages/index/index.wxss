@@ -1,21 +1,190 @@
-/**index.wxss**/
-.userinfo {
+.search-bg {
+  height: 100rpx;
+  width: 100%;
+  background: #fff;
+}
+
+.search {
+  width: 700rpx;
+  border-radius: 5rpx;
+  background: #ededed;
+  line-height: 70rpx;
+  margin-top: 20rpx;
+  margin-bottom: 5rpx;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.search-logo {
+  width: 27rpx;
+  height: 27rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 6rpx;
+  margin-right: 5rpx;
+  margin-left: 20rpx;
+}
+
+.banner-bg {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+}
+
+.banner {
+  width: 100%;
+  height: 315rpx;
+  margin: 0 auto;
+}
+
+.banner image {
+  width: 100%;
+  height: 315rpx;
+}
+
+.menu {
+  display: flex;
+  /* height: 175rpx; */
+  width: 750rpx;
+  /* flex-flow: row nowrap; */
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  background-color: #fff;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  /* flex: 1; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 20rpx 0;
+  width: 20%;
+  height: 175rpx;
+  box-sizing: border-box;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.menu-item image, .publish {
+  display: block;
+  width: 58rpx;
+  height: 58rpx;
+  margin: 0 auto;
+  margin-bottom: 12rpx;
+  text-align: center;
+  color: #fab614;
+  font-size: 42rpx;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.menu-item text {
+  display: block;
+  font-size: 22rpx;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1;
+  padding-top: 3rpx;
+  color: #fab614;
 }
 
-.usermotto {
-  margin-top: 200px;
+.block {
+  width: 750rpx;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  margin-top: 20rpx;
+}
+
+.block-header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 90rpx;
+  border-bottom: 1px #ebebeb solid;
+}
+
+.block-header text {
+  padding-right: 575rpx;
+  background: url("http://oweupqzdv.bkt.clouddn.com/right-arrow.png") right 4rpx no-repeat;
+  background-size: 16.656rpx 27rpx;
+  display: inline-block;
+  height: 36rpx;
+  color: #666;
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 36rpx;
+}
+
+.block-content {
+  width: 750rpx;
+  height: 400rpx;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  margin-top: 40rpx;
+}
+
+.wrap {
+  position: relative;
+}
+
+.msg {
+  z-index: 2;
+  padding: 10rpx 15rpx;
+  left: 0;
+  top: 0;
+}
+
+.msg .name {
+  display: block;
+  font-size: 24rpx;
+  height: 30rpx;
+  color: #555;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.msg .des {
+  margin-top: 8rpx;
+  display: block;
+  font-size: 20rpx;
+  height: 24rpx;
+  color: #7f7f7f;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.msg .price {
+  margin-top: -2rpx;
+  font-size: 22rpx;
+  color: #fab614;
+  font-weight: bold;
+}
+
+.block-item {
+  width: 240rpx;
+  height: 380rpx;
+  overflow: hidden;
+  margin-left: 25rpx;
+  display: inline-block;
+}
+
+.item {
+  width: 235rpx;
+  height: 235rpx;
+  overflow: hidden;
+  border: 1rpx solid #f0f0f0;
+  display: inline-block;
+  border-radius: 0.28571rem;
+}
+
+.item image {
+  width: 235rpx;
+  height: 235rpx;
 }
