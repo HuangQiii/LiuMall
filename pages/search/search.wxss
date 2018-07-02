@@ -1,16 +1,10 @@
-/* pages/search/search.wxss */
-
 page {
+  width: 100%;
   min-height: 100%;
   background-color: #f4f4f4;
 }
 
-.container {
-  min-height: 100%;
-  background-color: #f4f4f4;
-}
-
-.search-header {
+.search {
   position: fixed;
   top: 0;
   width: 750rpx;
@@ -23,7 +17,7 @@ page {
   color: #555;
 }
 
-.search-header .input-box {
+.input {
   position: relative;
   margin-top: 16rpx;
   float: left;
@@ -35,7 +29,7 @@ page {
   border-radius: 35rpx;
 }
 
-.search-header .icon {
+.search-icon {
   position: absolute;
   top: 20rpx;
   left: 25rpx;
@@ -43,7 +37,7 @@ page {
   height: 31rpx;
 }
 
-.search-header .del {
+.search-del {
   position: absolute;
   top: 6rpx;
   right: 25rpx;
@@ -53,7 +47,7 @@ page {
   padding: 10rpx;
 }
 
-.search-header .keywrod {
+.keywrod {
   position: absolute;
   top: 0;
   left: 40rpx;
@@ -62,7 +56,7 @@ page {
   padding-left: 30rpx;
 }
 
-.search-header .right {
+.search-tip {
   margin-left: 30rpx;
   width: 66rpx;
   height: 107rpx;
@@ -71,21 +65,21 @@ page {
   font-size: 32rpx;
 }
 
-.no-search {
+.history {
   height: auto;
   overflow: hidden;
   margin-top: 135rpx;
 }
 
-.serach-keywords {
+.panal {
   background: #fff;
-  width: 750rpx;
+  width: 100%;
   height: auto;
   overflow: hidden;
   margin-bottom: 20rpx;
 }
 
-.serach-keywords .h {
+.panal-header {
   padding: 0 35rpx;
   height: 85rpx;
   width: 100%;
@@ -96,27 +90,27 @@ page {
   align-content: space-around;
 }
 
-.serach-keywords .title {
+.panal-title {
   display: block;
   width: 120rpx;
   margin-left: 10rpx;
 }
 
-.serach-keywords .icon {
+.panal-icon {
   display: block;
   margin-left: 511rpx;
   height: 38rpx;
   width: 38rpx;
 }
 
-.serach-keywords .b {
+.panal-body {
   width: 750rpx;
   height: auto;
   overflow: hidden;
   padding-left: 40rpx;
 }
 
-.serach-keywords .item {
+.panal .item {
   display: inline-block;
   width: auto;
   height: 48rpx;
@@ -128,19 +122,19 @@ page {
   color: #555;
 }
 
-.serach-keywords .item.active {
-  color: #b4282d;
-  border: 1rpx solid #b4282d;
+.panal .item.active {
+  color: #fab614;
+  border: 1rpx solid #fab614;
 }
 
-.shelper-list {
+.help {
   width: 750rpx;
   height: auto;
   overflow: hidden;
   background: #fff;
 }
 
-.shelper-list .item {
+.helper-item {
   height: 100rpx;
   width: 688rpx;
   line-height: 100rpx;
@@ -185,7 +179,7 @@ page {
 }
 
 .sort-box .item.active .txt {
-  color: #b4282d;
+  color: #fab614;
 }
 
 .sort-box .item.by-price {
@@ -203,51 +197,15 @@ page {
   background-size: 15rpx 21rpx;
 }
 
-.cate-item {
+.good-search {
   margin-top: 210rpx;
   height: auto;
   overflow: hidden;
-}
-
-.cate-item .h {
-  height: 145rpx;
-  width: 750rpx;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.cate-item .h .name {
-  display: block;
-  height: 35rpx;
-  margin-bottom: 18rpx;
-  font-size: 28rpx;
-  color: #555;
-}
-
-.cate-item .h .desc {
-  display: block;
-  height: 24rpx;
-  font-size: 24rpx;
-  color: #999;
-}
-
-.cate-item .b {
   width: 750rpx;
   padding: 0 6.25rpx;
-  height: auto;
-  overflow: hidden;
 }
 
-.cate-item .list-filter {
-  height: 80rpx;
-  width: 100%;
-  background: #fff;
-  margin-bottom: 6.25rpx;
-}
-
-.cate-item .b .item {
+.good-item {
   float: left;
   background: #fff;
   width: 375rpx;
@@ -257,12 +215,12 @@ page {
   text-align: center;
 }
 
-.cate-item .item .img {
+.good-img {
   width: 302rpx;
   height: 302rpx;
 }
 
-.cate-item .item .name {
+.good-name {
   display: block;
   width: 365.625rpx;
   height: 35rpx;
@@ -273,29 +231,29 @@ page {
   color: #555;
 }
 
-.cate-item .item .price {
+.good-price {
   display: block;
   width: 365.625rpx;
   height: 30rpx;
   text-align: center;
   font-size: 27rpx;
-  color: #b4282d;
+  color: #fab614;
 }
 
-.search-result-empty {
+.empty-search {
   width: 100%;
   height: 100%;
   padding-top: 300rpx;
 }
 
-.search-result-empty .icon {
+.empty-search-icon {
   margin: 0 auto;
   display: block;
   width: 240rpx;
   height: 240rpx;
 }
 
-.search-result-empty .text {
+.empty-search-text {
   display: block;
   width: 100%;
   height: 40rpx;

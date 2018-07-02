@@ -1,6 +1,9 @@
 <view class="container">
   <view class="search-bg">
-    <view class="search">
+    <view
+      class="search"
+      bindtap='search'
+    >
       <image class="search-logo" src="/images/search.png" mode="aspectFit"/>
       输入关键字
     </view>

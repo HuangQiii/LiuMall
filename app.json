@@ -1,12 +1,12 @@
 {
   "pages":[
-    "pages/search/search",
     "pages/index/index",
     "pages/goods/goods",
     "pages/classify/classify",
     "pages/category/category",
     "pages/cart/cart",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/search/search"
   ],
   "window":{
     "backgroundTextStyle": "dark",

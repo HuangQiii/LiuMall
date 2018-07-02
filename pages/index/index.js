@@ -144,5 +144,10 @@ Page({
     wx.navigateTo({
       url: '/pages/category/category',
     })
+  },
+  search: function() {
+    wx.navigateTo({
+      url: '/pages/search/search'
+    });
   }
 })
