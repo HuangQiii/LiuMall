@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/publish/publish",
     "pages/index/index",
     "pages/goods/goods",
     "pages/classify/classify",

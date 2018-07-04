@@ -1,38 +1,49 @@
-const { extractComponentId } = require('../common/helper');
+'use strict';
 
-module.exports = {
-  _handleZanFieldChange(event) {
-    const componentId = extractComponentId(event);
-    event.componentId = componentId;
+Component({
+  behaviors: ['wx://form-field'],
 
-    
-
-    if (this.handleZanFieldChange) {
-      return this.handleZanFieldChange(event);
+  properties: {
+    title: String,
+    type: {
+      type: String,
+      value: 'input'
+    },
+    disabled: Boolean,
+    inputType: {
+      type: String,
+      value: 'text'
+    },
+    placeholder: String,
+    focus: Boolean,
+    mode: {
+      type: String,
+      value: 'normal'
+    },
+    right: Boolean,
+    error: Boolean,
+    maxlength: {
+      type: Number,
+      value: 140
     }
-
-    console.warn('页面缺少 handleZanFieldChange 回调函数');
   },
 
-  _handleZanFieldFocus(event) {
-    const componentId = extractComponentId(event);
-    event.componentId = componentId;
+  methods: {
+    handleFieldChange: function handleFieldChange(event) {
+      var _event$detail = event.detail,
+          detail = _event$detail === undefined ? {} : _event$detail;
+      var _detail$value = detail.value,
+          value = _detail$value === undefined ? '' : _detail$value;
 
-    
+      this.setData({ value: value });
 
-    if (this.handleZanFieldFocus) {
-      return this.handleZanFieldFocus(event);
-    }
-  },
-
-  _handleZanFieldBlur(event) {
-    const componentId = extractComponentId(event);
-    event.componentId = componentId;
-
-    
-
-    if (this.handleZanFieldBlur) {
-      return this.handleZanFieldBlur(event);
+      this.triggerEvent('change', event);
+    },
+    handleFieldFocus: function handleFieldFocus(event) {
+      this.triggerEvent('focus', event);
+    },
+    handleFieldBlur: function handleFieldBlur(event) {
+      this.triggerEvent('blur', event);
     }
   }
-};
+});

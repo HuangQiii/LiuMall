@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "发布",
+  "usingComponents": {
+    "zan-icon": "../../zanui/dist/icon/index",
+    "zan-field": "../../zanui/dist/field/index",
+    "zan-panel": "../../zanui/dist/panel/index",
+    "zan-select": "../../zanui/dist/select/index"
+  }
+}

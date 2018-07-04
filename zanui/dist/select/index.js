@@ -1,25 +1,29 @@
-const { extractComponentId } = require('../common/helper');
+'use strict';
 
-function handle(e) {
-  const componentId = extractComponentId(e);
-  const value = e.detail.value;
+Component({
+  properties: {
+    items: {
+      type: Array,
+      value: []
+    },
+    name: {
+      type: String,
+      value: ''
+    },
+    checkedValue: {
+      type: String,
+      value: ''
+    },
+    activeColor: {
+      type: String,
+      value: '#ff4444'
+    }
+  },
 
-  callback.call(this, componentId, value);
-}
-
-function callback(componentId, value) {
-  const e = { componentId, value };
-  
-
-  if (this.handleZanSelectChange) {
-    this.handleZanSelectChange(e);
-  } else {
-    console.warn('页面缺少 handleZanSelectChange 回调函数');
+  methods: {
+    handleSelectChange: function handleSelectChange(e) {
+      var value = e.detail.value;
+      this.triggerEvent('change', { value: value });
+    }
   }
-}
-
-module.exports = {
-  _handleZanSelectChange(e) {
-    handle.call(this, e);
-  }
-};
+});

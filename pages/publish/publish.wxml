@@ -1,0 +1,109 @@
+<scroll-view class="container" scroll-y="true">
+  <view>
+    <view class="weui-cells">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <view class="weui-uploader">
+            <view class="weui-uploader__hd">
+              <view class="weui-uploader__title">点击可预览选好的图片</view>
+              <view class="weui-uploader__info">{{imageList.length}}/5</view>
+            </view>
+            <view class="weui-uploader__bd">
+              <view class="weui-uploader__files">
+                <block wx:for="{{imageList}}" wx:for-item="image">
+                  <view class="weui-uploader__file">
+                    <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+                  </view>
+                </block>
+              </view>
+              <view class="weui-uploader__input-box">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='info'>
+      <zan-panel>
+        <zan-field
+          title="名称"
+          placeholder="请在此输入商品名称"
+          focus="{{ true }}"
+          value="{{ value }}"
+        >
+        </zan-field>
+        <zan-field
+          title="价格"
+          placeholder="请在此输入价格"
+          error="{{ true }}"
+          input-type="{{ number }}"
+        >
+        </zan-field>
+        <zan-field
+          title="描述"
+          type="{{ textarea }}"
+          placeholder="请在此输入商品描述"
+          maxlength="50"
+        >
+        </zan-field>
+        <zan-field
+          title="类型"
+          type="{{ textarea }}"
+          placeholder="请在此输入标签，不超过10个字"
+          maxlength="10"
+        >
+        </zan-field>
+      </zan-panel>
+      <view class='left-info'>
+        <!-- <view class='title'>
+          {{goods.name}}
+        </view>
+        <view class='price'>
+          ￥{{goods.price}}
+        </view> -->
+        <view
+          class="brand"
+          wx:if="{{brands.length > 0}}"
+        >
+          <view
+            wx:for="{{brands}}"
+            wx:key="{{item.id}}"
+            data-value="{{item.name}}"
+            class="tag"
+            hover-class="active"
+            bindtap="openBrand"
+          >
+            {{item.name}}
+          </view>
+        </view>
+        <!-- <view class='desc'>
+          {{goods.description}}
+        </view>  -->
+      </view> 
+    </view>
+
+    <view class="description">
+      <zan-panel>
+        <zan-select
+          items="{{ items }}"
+          data-type="color"
+          checkedValue="{{ checked.color }}"
+          activeColor="{{ activeColor }}"
+          bind:change="handleSelectChange"
+        />
+      </zan-panel>
+    </view>
+  </view>
+</scroll-view>
+
+<view class="bar">
+  <view
+    class="cart"
+    hover-class="active"
+    bindtap="addToCart"
+  >
+    提交审核
+  </view>
+</view>
