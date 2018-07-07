@@ -1,16 +1,16 @@
 .search-bg {
-  height: 100rpx;
+  /* height: 100rpx; */
   width: 100%;
   background: #fff;
 }
 
 .search {
   width: 700rpx;
-  border-radius: 5rpx;
-  background: #ededed;
+  border-radius: 35rpx;
+  background: #f4f4f4;
   line-height: 70rpx;
   margin-top: 20rpx;
-  margin-bottom: 5rpx;
+  margin-bottom: 20rpx;
   margin-left: auto;
   margin-right: auto;
   font-size: 24rpx;

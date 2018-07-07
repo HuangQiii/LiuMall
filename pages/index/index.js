@@ -29,70 +29,70 @@ Page({
         type: 0,
         linkId: '3',
         iconUrl: 'close',
-        name: 'Type1'
+        name: '书籍'
       },
       {
         id: '1',
         type: 0,
         linkId: '3',
         iconUrl: 'location',
-        name: 'Type2'
+        name: '代步工具'
       },
       {
         id: '3',
         type: 1,
         linkId: '3',
         iconUrl: 'clock',
-        name: 'Type3'
+        name: '文具'
       },
       {
         id: '4',
         type: 1,
         linkId: '4',
         iconUrl: 'chat',
-        name: 'Type4'
+        name: '洗涤用品'
       },
       {
         id: '5',
         type: 1,
         linkId: '5',
         iconUrl: 'exchange',
-        name: 'Type5'
+        name: '化妆品'
       },
       {
         id: '6',
         type: 0,
         linkId: '6',
         iconUrl: 'upgrade',
-        name: 'Type6'
+        name: '台灯'
       },
       {
         id: '7',
         type: 0,
         linkId: '7',
         iconUrl: 'edit',
-        name: 'Type7'
+        name: '宠物'
       },
       {
         id: '8',
         type: 1,
         linkId: '8',
         iconUrl: 'contact',
-        name: 'Type8'
+        name: '信息'
       },
       {
         id: '9',
         type: 1,
         linkId: '9',
         iconUrl: 'passed',
-        name: 'Type9'
+        name: '食品'
       },
       {
         id: '10',
         type: 1,
         linkId: '10',
         iconUrl: 'records',
-        name: 'Type10'
+        name: '更多'
       }
     ],
     brand: [

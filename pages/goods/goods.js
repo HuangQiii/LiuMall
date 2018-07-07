@@ -1,6 +1,4 @@
-const { extend } = require('../../zanui/dist/index');
-
-Page(extend({}, 
+Page(
   {
     data: {
       gallery: [
@@ -70,4 +68,3 @@ Page(extend({},
       console.log(title);
     },
   })
-)
