@@ -20,4 +20,9 @@ Page({
       });
     }
   },
+  goToPublish: function() {
+    wx.navigateTo({
+      url: '/pages/publish/publish',
+    })
+  }
 })

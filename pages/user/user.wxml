@@ -11,6 +11,7 @@
     <zan-icon
       class="publish"
       type="{{'add'}}"
+      bindtap='goToPublish'
     />
   </view>
 
