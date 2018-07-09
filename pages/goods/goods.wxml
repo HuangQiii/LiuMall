@@ -58,13 +58,16 @@
     </view>
 
     <view class="description">
-      <view
+      <!-- <view
         class="item"
-        wx:for="{{attribute}}"
+         wx:for="{{attribute}}" 
         wx:key="{{item.name}}"
       >
         <text class="des-prop">{{item.name}}</text>
         <text class="des-value">{{item.value}}</text>
+      </view> -->
+      <view class="item">
+        <text class="des">{{description}}</text>
       </view>
     </view>
   </view>

@@ -132,6 +132,13 @@ Page({
         }
       }
     });
+    this.loadBanner();
+  },
+  loadBanner: function() {
+    // 请求banner信息，获得一个数组
+    this.setData({
+      banner: [],
+    });
   },
   bannerNav: function (e) {
     let banner = e.target.dataset.value;

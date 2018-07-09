@@ -9,7 +9,10 @@
     </view>
   </view>
 
-  <view class="banner-bg">
+  <view
+    class="banner-bg"
+    wx:if="{{banner.length > 0}}"
+  >
     <swiper
       class="banner"
       indicator-dots="true"

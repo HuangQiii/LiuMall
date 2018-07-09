@@ -119,6 +119,12 @@
   color: #999;
 }
 
+.des {
+  font-size: 25rpx;
+  line-height: 45rpx;
+  color: #999;
+}
+ 
 .des-value {
   width: 500rpx;
   font-size: 25rpx;
