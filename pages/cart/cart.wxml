@@ -1,21 +1,23 @@
 <view
   class="view"
   wx:if="{{cartGoods.length}}">
-  <view class="lists">
-    <view
+  <View class="lists">
+    <!-- <view
       class="item"
       wx:for="{{cartGoods}}"
       wx:key="{{item.id}}"
       wx:for-index="index"
     >
-      <view
-        class="checkbox {{item.checked ? 'checked' : ''}}"
+      <View
+        class="item-selectd"
         bindtap="checkedItem"
         data-index="{{index}}"
         data-id="{{item.id}}"
       >
-        {{item.checked? '√': ''}}
-      </view>
+        <view class="checkbox {{item.checked ? 'checked' : ''}}">
+          {{item.checked? '✓': ''}}
+        </view>
+      </View>
       <view class="item-good">
         <image
           class="img"
@@ -27,8 +29,48 @@
           <text class="message price">￥{{item.price}}</text>
         </view>
       </view>
-    </view>
-  </view>
+    </view> -->
+      <view wx:for="{{cartGoods}}"  wx:key="{{cartGoods.id}}"  class="item">
+        <View
+          bindtouchstart="touchS"
+          bindtouchmove="touchM"
+          bindtouchend="touchE"
+          data-index="{{item.id}}"
+          style="{{item.txtStyle}}"
+          class="inner txt"
+        >
+            <View
+              class="item-selectd"
+              bindtap="checkedItem"
+              data-index="{{index}}"
+              data-id="{{item.id}}"
+            >
+              <view class="checkbox {{item.checked ? 'checked' : ''}}">
+                {{item.checked? '✓': ''}}
+              </view>
+            </View> 
+             <!-- <View class="item-good">
+              <image
+                class="img"
+                src="{{item.picUrl}}"
+              />
+              <View class="item-msg">
+                <text class="message name">{{item.name}}</text>
+                <text class="message description">{{item.spec}}</text>
+                <text class="message price">￥{{item.price}}</text>
+              </View>
+            </View>  -->
+        </View>
+        <View
+          data-index="{{item.id}}"
+          bindtap="delItem"
+          class="inner del"
+        >
+          删除
+        </View>
+      </view>
+
+  </View>
   <view class="bottom-bar">
     <view
       class="checkbox {{checkedAllStatus ? 'checked' : ''}}"
