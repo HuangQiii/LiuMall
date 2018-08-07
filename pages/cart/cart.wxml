@@ -32,9 +32,7 @@
     </view> -->
       <view wx:for="{{cartGoods}}"  wx:key="{{cartGoods.id}}"  class="item">
         <View
-          bindtouchstart="touchS"
-          bindtouchmove="touchM"
-          bindtouchend="touchE"
+          
           data-index="{{item.id}}"
           style="{{item.txtStyle}}"
           class="inner txt"
@@ -49,7 +47,13 @@
                 {{item.checked? '✓': ''}}
               </view>
             </View> 
-             <!-- <View class="item-good">
+            <View
+              class="item-good"
+              bindtouchstart="touchS"
+          bindtouchmove="touchM"
+          bindtouchend="touchE"
+          data-index="{{item.id}}"
+            >
               <image
                 class="img"
                 src="{{item.picUrl}}"
@@ -59,7 +63,7 @@
                 <text class="message description">{{item.spec}}</text>
                 <text class="message price">￥{{item.price}}</text>
               </View>
-            </View>  -->
+            </View>
         </View>
         <View
           data-index="{{item.id}}"

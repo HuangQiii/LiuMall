@@ -14,16 +14,16 @@ Page({
         price: '688.00',
         txtStyle: "",
       },
-      // {
-      //   id: '2',
-      //   checked: true,
-      //   picUrl: '../../images/wudong3.jpg',
-      //   name: '要怎样',
-      //   spec: '哈哈哈哈哈哈哈哈哈哈',
-      //   number: 1,
-      //   price: '888.00',
-      //   txtStyle: "",
-      // },
+      {
+        id: '2',
+        checked: true,
+        picUrl: '../../images/wudong3.jpg',
+        name: '要怎样',
+        spec: '哈哈哈哈哈哈哈哈哈哈',
+        number: 1,
+        price: '888.00',
+        txtStyle: "",
+      },
       // {
       //   id: '3',
       //   checked: false,
@@ -140,6 +140,7 @@ Page({
     // check out
   },
   touchS: function (e) {
+    console.log(e);
     if (e.touches.length == 1) {
       this.setData({
         //设置触摸起始点水平方向位置
@@ -165,7 +166,8 @@ Page({
         }
       }
       //获取手指触摸的是哪一项
-      var id = e.target.dataset.index;
+      // var id = e.target.dataset.index;
+      var id = e.currentTarget.dataset.index;
       var cartGoods = this.data.cartGoods;
       const index = cartGoods.findIndex(v => v.id === id);
       if(index > -1) {
@@ -186,9 +188,10 @@ Page({
       var disX = this.data.startX - endX;
       var delBtnWidth = this.data.delBtnWidth;
       //如果距离小于删除按钮的1/2，不显示删除按钮
-      var txtStyle = disX > delBtnWidth / 2 ? "left:-" + delBtnWidth + "px" : "left:0px";
+      var txtStyle = disX > delBtnWidth / 2 ? "left:-" + delBtnWidth + "rpx" : "left:0rpx";
       //获取手指触摸的是哪一项
-      var id = e.target.dataset.index;
+      // var id = e.target.dataset.index;
+      var id = e.currentTarget.dataset.index;
       var cartGoods = this.data.cartGoods;
       const index = cartGoods.findIndex(v => v.id === id);
       if (index >= 0) {

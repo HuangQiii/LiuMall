@@ -43,10 +43,9 @@ page {
 
 .item-good {
   height: 164rpx;
-  /* flex: 1;  */
-   width: 300rpx;
+  flex: 1; 
   display: flex;
-  background: blue;
+  /* background: lightblue; */
 }
 
 .img {
@@ -177,5 +176,7 @@ page {
     text-align: center;
     z-index: 4;
     right: 0;
-    color: #fff
+    color: #fff;
+    font-size: 34rpx;
+    padding-left: 50rpx;
 }
