@@ -64,6 +64,11 @@ Page(
         url: '/pages/index/index'
       });
     },
+    openCartPage: function () {
+      wx.switchTab({
+        url: '/pages/cart/cart'
+      });
+    },
     openBrand: function (e) {
       let title = e.target.dataset.value
       console.log(title);

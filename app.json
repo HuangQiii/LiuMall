@@ -1,9 +1,9 @@
 {
   "pages":[
-    "pages/cart/cart",
-    "pages/index/index",
-    "pages/publish/publish",
     "pages/goods/goods",
+    "pages/index/index",
+    "pages/cart/cart",
+    "pages/publish/publish",
     "pages/classify/classify",
     "pages/category/category",
     "pages/user/user",

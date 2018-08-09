@@ -223,16 +223,13 @@ Page({
       delBtnWidth: delBtnWidth
     });
   },
-  //点击删除按钮事件
   delItem: function (e) {
-    //获取列表中要删除项的下标
-    var index = e.target.dataset.index;
-    var list = this.data.list;
-    //移除列表中下标为index的项
-    list.splice(index, 1);
-    //更新列表的状态
+    const id = e.target.dataset.index;
+    const cartGoods = this.data.cartGoods;
+    const index = cartGoods.findIndex(v => v.id === id);
+    cartGoods.splice(index, 1);
     this.setData({
-      list: list
+      cartGoods: cartGoods,
     });
   },
 

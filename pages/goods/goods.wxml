@@ -85,6 +85,16 @@
     />
   </view>
   <view
+    class="cart-btn"
+    hover-class="active"
+    bindtap="openCartPage"
+  >
+    <image
+      class="home-icon"
+      src="/images/shopingCart.png"
+    />
+  </view>
+  <view
     class="cart"
     hover-class="active"
     bindtap="addToCart"

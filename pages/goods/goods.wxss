@@ -157,6 +157,17 @@
   justify-content: center;
 }
 
+.bar .cart-btn {
+  float: left;
+  height: 100rpx;
+  width: 140rpx;
+  border-top: 1px solid #f4f4f4;
+  border-left: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .bar .home.active {
   background: #ebebeb;
 }
